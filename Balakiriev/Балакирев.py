@@ -38,29 +38,45 @@
 # import numpy.linalg as npl
 # a=np.array([[-1,0,-1,-2,2],[2,-1,1,-2,2],[1,-2,0,-1,-1], [2,1,2,1,1]])
 # print (npl.matrix_rank(a))
-class Vector:
-    MIN_COORD = 0
-    MAX_COORD = 100
+# class Vector:
+#     MIN_COORD = 0
+#     MAX_COORD = 100
+#
+#     @classmethod
+#     def validate(cls, arg):
+#         return cls.MIN_COORD <= arg <= cls.MAX_COORD
+#
+#     def __init__(self, x, y):
+#         self.x = self.y = 0
+#         if Vector.validate(x) and Vector.validate(y):
+#             self.x = x
+#             self.y = y
+#
+#     def get_coord(self):
+#         return self.x, self.y
+#
+#     @staticmethod
+#     def norm2(x,y):
+#         return x*x+y*y
+#
+#
+# v = Vector(2, 600)
+# rez = Vector.norm2(5, 6)
+# coord = v.get_coord()
+# print(rez)
+# class Cat:
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __repr__(self):
+#         return f'{self.__class__}: {self.name}'
+#
+#     def __str__(self):
+#         return f'{self.name}'
+#
+#
+#
+# cat = Cat('Musiya')
+# print(cat.str())
 
-    @classmethod
-    def validate(cls, arg):
-        return cls.MIN_COORD <= arg <= cls.MAX_COORD
-
-    def __init__(self, x, y):
-        self.x = self.y = 0
-        if Vector.validate(x) and Vector.validate(y):
-            self.x = x
-            self.y = y
-
-    def get_coord(self):
-        return self.x, self.y
-
-    @staticmethod
-    def norm2(x,y):
-        return x*x+y*y
-
-
-v = Vector(2, 600)
-rez = Vector.norm2(5, 6)
-coord = v.get_coord()
-print(rez)

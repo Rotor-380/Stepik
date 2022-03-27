@@ -36,21 +36,21 @@
 # c2.display()  # печатает "Текущее значение счетчика = 4"
 
 
-class Point:
-    def set_coordinates(self, x=0, y=0):
-        self.x = x
-        self.y = y
-
-    def get_distance(self, point2):
-        print(((self.x - point2.x) ** 2 + (self.y - point2.y) ** 2) ** 0.5) if isinstance(point2, Point) else print("Передана не точка")
-        #print( [ "Передана не точка", (((self.x - point2.x) ** 2 + (self.y - point2.y) ** 2) ** 0.5) ][isinstance(point2, Point)] )
-
-p1 = Point()
-p2 = Point()
-p1.set_coordinates(1, 2)
-p2.set_coordinates(4, 6)
-d = p1.get_distance(p2)  # вернёт 5.0
-p1.get_distance('10')
+# class Point:
+#     def set_coordinates(self, x=0, y=0):
+#         self.x = x
+#         self.y = y
+#
+#     def get_distance(self, point2):
+#         print(((self.x - point2.x) ** 2 + (self.y - point2.y) ** 2) ** 0.5) if isinstance(point2, Point) else print("Передана не точка")
+#         #print( [ "Передана не точка", (((self.x - point2.x) ** 2 + (self.y - point2.y) ** 2) ** 0.5) ][isinstance(point2, Point)] )
+#
+# p1 = Point()
+# p2 = Point()
+# p1.set_coordinates(1, 2)
+# p2.set_coordinates(4, 6)
+# d = p1.get_distance(p2)  # вернёт 5.0
+# p1.get_distance('10')
 
 
 # class Laptop:
@@ -139,40 +139,40 @@ p1.get_distance('10')
 # print(jack.description()) # распечатает 'Jack is 4 years old'
 # print(jack.speak("Woof Woof")) # распечатает 'Jack says Woof Woof'
 # print(jack.speak("Bow Wow")) # распечатает 'Jack says Bow Wow'
-class Stack():
-    def __init__(self):
-        self.values = []
-
-    def push(self, item):
-        #self.items = item
-        self.values.append(item)
-
-    def pop(self):
-        return self.values.pop(-1) if len(self.values) != 0 else print("Empty Stack")
-
-    def peek(self):
-        return self.values[-1] if len(self.values) != 0 else print("Empty Stack")
-
-    def is_empty(self):
-        return len(self.values) == 0
-
-    def size(self):
-        return len(self.values)
-
-
-s = Stack()
-s.peek()  # распечатает 'Empty Stack'
-print(s.is_empty())  # распечатает True
-s.push('cat')  # кладем элемент 'cat' на вершину стека
-s.push('dog')  # кладем элемент 'dog' на вершину стека
-print(s.peek())  # распечатает 'dog'
-s.push(True)  # кладем элемент True на вершину стека
-print(s.size())  # распечатает 3
-print(s.is_empty())  # распечатает False
-s.push(777)  # кладем элемент 777 на вершину стека
-print(s.pop())  # удаляем элемент 777 с вершины стека и печатаем его
-print(s.pop())  # удаляем элемент True с вершины стека и печатаем его
-print(s.size())  # распечатает 2
+# class Stack():
+#     def __init__(self):
+#         self.values = []
+#
+#     def push(self, item):
+#         #self.items = item
+#         self.values.append(item)
+#
+#     def pop(self):
+#         return self.values.pop(-1) if len(self.values) != 0 else print("Empty Stack")
+#
+#     def peek(self):
+#         return self.values[-1] if len(self.values) != 0 else print("Empty Stack")
+#
+#     def is_empty(self):
+#         return len(self.values) == 0
+#
+#     def size(self):
+#         return len(self.values)
+#
+#
+# s = Stack()
+# s.peek()  # распечатает 'Empty Stack'
+# print(s.is_empty())  # распечатает True
+# s.push('cat')  # кладем элемент 'cat' на вершину стека
+# s.push('dog')  # кладем элемент 'dog' на вершину стека
+# print(s.peek())  # распечатает 'dog'
+# s.push(True)  # кладем элемент True на вершину стека
+# print(s.size())  # распечатает 3
+# print(s.is_empty())  # распечатает False
+# s.push(777)  # кладем элемент 777 на вершину стека
+# print(s.pop())  # удаляем элемент 777 с вершины стека и печатаем его
+# print(s.pop())  # удаляем элемент True с вершины стека и печатаем его
+# print(s.size())  # распечатает 2
 # class UserMail:
 #     def __init__(self, login, email):
 #         self.login = login
@@ -182,21 +182,66 @@ print(s.size())  # распечатает 2
 #         return self.__email
 #
 #     def set_email(self, mail):
-#         # Метод должен проверять,
-#         # что в новой почте есть только один символ @ и после нее есть точка.
-#         # Если данные условия выполняются, новая почта сохраняется в атрибут __email,
-#         # в противном случае выведите сообщение "Ошибочная почта";
 #         lin = ''.join(a for a in filter(lambda l: '@' in l and l.count('@') == 1, [mail]) if '.' in a.split('@')[1])
 #         self.__email = lin if len(lin) != 0 else print("Ошибочная почта")
 #
 #     email = property(fget=get_email, fset=set_email)
-#
-#
+# #
+# #
 # k = UserMail('belosnezhka', 'prince@wait.you')
 # print(k.email)  # prince@wait.you
 # k.email = [1, 2, 3]  # Ошибочная почта
 # k.email = 'prince@still@.wait'  # Ошибочная почта
 # k.email = 'prince@still.wait'
 # print(k.q)  # prince@still.wait
-#print(UserMail.__dict__)
+# print(UserMail.__dict__)
+class Money:
 
+    def __init__(self, dollar=0, cent=0):
+        self.total_cents = dollar * 100 + cent
+
+    @classmethod
+    def verify_dollars(cls, x):
+        if type(x) != int or x < 0:
+            print("Error dollars")
+            return False
+        return True
+
+    @classmethod
+    def verify_cents(cls, y):
+        if type(y) != int or y > 100 or y < 0:
+            print("Error cents")
+        return True
+
+    @property
+    def dollars(self):
+        return self.total_cents // 100
+
+    @dollars.setter
+    def dollars(self, doll):
+        # print('setter get:', doll, type(doll))
+        if self.verify_dollars(doll):
+            self.total_cents = doll * 100 + self.cents
+            # print(self.total_cents)
+
+    @property
+    def cents(self):
+        return self.total_cents % 100
+
+    @cents.setter
+    def cents(self, cen):
+        if self.verify_cents(cen):
+            self.total_cents = self.dollars * 100 + cen
+
+    def __str__(self):
+        return f"Ваше состояние составляет {self.dollars} долларов {self.cents} центов"
+
+
+Bill = Money(101, 101)
+print(Bill)  # Ваше состояние составляет 101 долларов 99 центов
+# print(Bill.total_cents)
+print(Bill.dollars, Bill.cents)  # 101 99
+Bill.dollars = 666
+print(Bill)  # Ваше состояние составляет 666 долларов 99 центов
+Bill.cents = 12
+print(Bill)  # Ваше состояние составляет 666 долларов 12 центов
