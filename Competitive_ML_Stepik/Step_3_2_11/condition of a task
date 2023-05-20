@@ -1,1 +1,4 @@
-
+You are given a sample of real signals that consist of 128 points and belong to two classes.
+If you build these signals, it is already visually clear that a simple ML model will not be able to distinguish them unambiguously.
+Nevertheless, it is quite real. Try to come up with such signs and make a forecast so that your accuracy is 100%. 
+This task does not imply the use of third-party libraries other than numpy and pandas. Only two features are enough to divide the classes.
